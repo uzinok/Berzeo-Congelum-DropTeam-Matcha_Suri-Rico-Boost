@@ -1,0 +1,36 @@
+.nav__list {
+	@media (max-width: $max-lg) {
+		display: none;
+	}
+}
+
+.nav__link-icon {
+	right: var(--offset-row);
+	display: block;
+	width: 22px;
+	height: 26px;
+	background-image: url(../../img/basket.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media (max-width: $max-lg) {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.nav__button-toggle {
+	display: block;
+	width: 32px;
+	height: 14px;
+	padding: 0;
+
+	@media (max-width: $max-lg) {
+		position: absolute;
+		top: 50%;
+		left: var(--offset-row);
+		transform: translateY(-50%);
+	}
+}

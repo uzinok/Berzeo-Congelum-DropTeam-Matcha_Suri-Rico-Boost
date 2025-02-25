@@ -18,3 +18,11 @@ img {
 	overflow: hidden;
 	border: none;
 }
+
+.container {
+	max-width: 1253px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: var(--offset-row);
+	padding-left: var(--offset-row);
+}
