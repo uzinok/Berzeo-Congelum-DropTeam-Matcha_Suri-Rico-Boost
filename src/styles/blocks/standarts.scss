@@ -1,0 +1,136 @@
+.standarts {
+	overflow: hidden;
+	background-color: #f2f9f7;
+
+	& .page__title,
+	& .page__subtitle {
+		width: 100%;
+		max-width: 900px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.standards__inner {
+	@media (min-width: $min-lg) {
+		display: flex;
+		align-items: flex-start;
+	}
+}
+
+.standarts__swiper {
+	max-width: 301px;
+	margin: 0;
+	overflow: visible;
+
+	@media (min-width: $min-lg) {
+		flex-grow: 1;
+		min-width: 615px;
+		margin-top: -37px;
+	}
+}
+
+.standarts__list {
+	padding: 0;
+	list-style-type: none;
+
+	@media (min-width: $min-lg) {
+		display: grid;
+		flex-wrap: wrap;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.standarts__item {
+	padding-top: 15px;
+
+	@media (min-width: $min-lg) {
+		width: auto !important;
+		height: auto;
+		margin: 0 !important;
+		padding: 32px 0px 70px 5px;
+
+		&:nth-child(n+3) {
+			border-top: 1px solid #ffffff;
+		}
+
+		&:nth-child(odd) {
+			border-right: 1px solid #ffffff;
+		}
+
+		&:nth-child(even) {
+			padding-left: 70px;
+		}
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		width: 94px;
+		height: 79px;
+		margin-bottom: 13px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&--clinically::before {
+		background-image: url(../../img/standarts-list__clinically.svg);
+	}
+
+	&--only::before {
+		background-image: url(../../img/standarts-list__only.svg);
+	}
+
+	&--quality::before {
+		background-image: url(../../img/standarts-list__quality.svg);
+	}
+
+	&--gmo::before {
+		background-image: url(../../img/standarts-list__gmo.svg);
+	}
+}
+
+.standarts__list-title {
+	margin-top: 0;
+	margin-bottom: 14px;
+	font-size: 24px;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 63px;
+		height: 1px;
+		margin-top: 4px;
+		background-color: #84ab31;
+	}
+}
+
+.standarts__list-notes {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.standarts__desktop-after {
+	display: none;
+
+	@media (min-width: $min-lg) {
+		position: relative;
+		display: block;
+		width: 319px;
+		margin-top: 13px;
+		margin-left: 48px;
+		padding: 30px 0 35px 20px;
+		border: 16px solid #84ab31;
+
+		& img:first-child {
+			display: block;
+			width: auto;
+			max-width: none;
+			height: 488px;
+		}
+
+		& img:last-child {
+			display: none;
+		}
+	}
+}

@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nature in Store</title>
+	<link rel="stylesheet" href="./static/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./styles/main.css">
+	<script src="./static/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body class="page">
@@ -18,6 +20,7 @@
 	</svg>
 
 	<header class="page__header header">
+		<h1 class="visually-hidden">Nature in Store</h1>
 		<div class="header__container container">
 			<a href="index.html" class="header__logo logo">
 				<svg width="187" height="25" aria-label="Nature in Store">
@@ -33,21 +36,165 @@
 					<li><a href="#review">Review</a></li>
 				</ul>
 
-				<div class="nav__right-wrap">
-					<a href="#" class="nav__link-icon nav__link-icon--basket">
-						<span class="visually-hidden">Basket</span>
-					</a>
+				<a href="#" class="nav__link-icon nav__link-icon--basket">
+					<span class="visually-hidden">Basket</span>
+				</a>
 
-					<button type="button" class="nav__button-toggle">
-						<span class="visually-hidden">Nav toggle</span>
-					</button>
-				</div>
+				<button type="button" class="nav__button-toggle">
+					<span class="visually-hidden">Nav toggle</span>
+				</button>
 
 			</nav>
 
 		</div>
+
+		<div id="products" class="hero">
+			<div class="container"></div>
+		</div>
 	</header>
 
+	<main>
+
+		<section class="natural">
+			<div class="container">
+				<h2 class="page__title">Natural products</h2>
+				<p class="page__subtitle">Ingredients of&nbsp;the highest quality, in&nbsp;their most pure forms,
+					<br> carefully chosen for non-irritating properties.</p>
+
+				<div class="natural__swiper swiper">
+					<ul class="natural__list swiper-wrapper">
+
+						<li class="natural__item swiper-slide">
+							<a href="#" class="natural__prodwrap">
+								<img src="./img/rico_boost.png" alt="Rico Bost"></a>
+							<p class="natural__notes">
+								<span>Мужская сила,
+									<br> здоровье простаты, напиток</span>
+								<span class="natural__star star star--4_9"></span>
+								<span>4,9 (3421 отзывов)</span>
+							</p>
+							<h3 class="natural__list-title">Rico Boost</h3>
+							<p class="natural__list-subtitle">Натуральный растворимый напиток для укрепления мужского здоровья</p>
+						</li>
+
+						<li class="natural__item swiper-slide">
+							<a href="" class="natural__prodwrap">
+								<img src="./img/matcha_suri.png" alt="Matcha Suri"></a>
+							<p class="natural__notes">
+								<span>Похудение, напиток,
+									<br> сжигатель жира</span>
+								<span class="natural__star star star--4_9"></span>
+								<span>4,9 (3421 отзывов)</span>
+							</p>
+							<h3 class="natural__list-title">Matcha Suri</h3>
+							<p class="natural__list-subtitle">Напиток на основе чая матча для похудения</p>
+						</li>
+
+						<li class="natural__item swiper-slide">
+							<a href="" class="natural__prodwrap">
+								<img src="./img/congelum.png" alt="Congelum"></a>
+							<p class="natural__notes">
+								<span>Против боли и воспаления,
+									<br> охлаждение, гель</span>
+								<span class="natural__star star"></span>
+								<span>5 (5314 отзывов)</span>
+							</p>
+							<h3 class="natural__list-title">Congelum</h3>
+							<p class="natural__list-subtitle">Гель на основе растительных компонентов против всех видов боли</p>
+						</li>
+
+						<li class="natural__item swiper-slide">
+							<a href="" class="natural__prodwrap">
+								<img src="./img/berzeo.png" alt="Berzeo"></a>
+							<p class="natural__notes">
+								<span>Похудение, растворимый напиток,
+									<br> ускоритель метаболизма</span>
+								<span class="natural__star star"></span>
+								<span>5 (5314 отзывов)</span>
+							</p>
+							<h3 class="natural__list-title">Berzeo</h3>
+							<p class="natural__list-subtitle">Натуральный растворимый жиросжигающий напиток на основе экстрактов экзотических фруктов</p>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+		</section>
+
+		<section id="standarts" class="standarts">
+			<div class="standards__container container">
+				<h2 class="page__title">Our standards</h2>
+				<p class="page__subtitle">Мы придерживаемся исключительно на каждом этапе производства, что позволяет нам гарантировать высочайшее качество продукции на рынке и предлагать нашим клиентам отличный сервис.</p>
+
+				<div class="standards__inner">
+					<div class="standarts__swiper swiper">
+						<ul class="standarts__list swiper-wrapper">
+							<li class="standarts__item swiper-slide standarts__item standarts__item--clinically">
+								<h3 class="standarts__list-title">Clinically Proven Effectiveness</h3>
+								<p class="standarts__list-notes">Мы используем только натуральные ингредиенты высочайшего качества, полностью исследованные и одобренные</p>
+							</li>
+							<li class="standarts__item swiper-slide standarts__item standarts__item--only">
+								<h3 class="standarts__list-title">Only Natural Components</h3>
+								<p class="standarts__list-notes">Our goal is to offer vegetarian options across our entire range</p>
+							</li>
+							<li class="standarts__item swiper-slide standarts__item standarts__item--quality">
+								<h3 class="standarts__list-title">Quality Guarantee</h3>
+								<p class="standarts__list-notes">We use only quality ingredients that have no contraindications or side effects</p>
+							</li>
+							<li class="standarts__item swiper-slide standarts__item standarts__item--gmo">
+								<h3 class="standarts__list-title">GMO-Free</h3>
+								<p class="standarts__list-notes">В наших рецептурах полностью отсутствует генетически модифицированные организмы</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="standarts__desktop-after">
+						<img src="./img/standarts-after.jpg" alt="#">
+						<img src="./img/nature-in-store.svg" alt="Nature in store">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="components" class="components">
+			<div class="container">
+				<h2 class="page__title">Highest quality</h2>
+				<p class="page__subtitle">
+					В наших продуктах мы используем только натуральные проверенные ингредиенты высочайшего качества
+					<span>В основе нашей продукции лежат:</span>
+
+					<div class="components__swiper swiper">
+						<ul class="components__list swiper-wrapper">
+							<li class="components__item swiper-slide">
+								<img src="./img/quality-list-1.jpg" alt="#">
+								<h3 class="components__title">Natural plant extracts</h3>
+								<p class="components__notest">Эффективность натуральных экстрактов признана не только мировым научным сообществом, но и древними мудрецами, которые использовали их в своих практиках для поддержания здоровья и долголетия. Современные исследования подтверждают их способность укреплять иммунитет, улучшать обмен веществ и снижать стресс, основываясь на многовековых знаниях о силе природы.</p>
+							</li>
+							<li class="components__item swiper-slide">
+								<img src="./img/quality-list-2.jpg" alt="#">
+								<h3 class="components__title">Peptides</h3>
+								<p class="components__notest">Эти активные соединения играют ключевую роль в поддержании здоровья и равновесия в организме. Они стимулируют клеточное обновление, укрепляют защитные функции, ускоряют обмен веществ и способствуют быстрому восстановлению после нагрузок.</p>
+							</li>
+							<li class="components__item swiper-slide">
+								<img src="./img/quality-list-3.jpg" alt="#">
+								<h3 class="components__title">Essential oils</h3>
+								<p class="components__notest">Эти активные соединения играют ключевую роль в поддержании здоровья и равновесия в организме. Они стимулируют клеточное обновление, укрепляют защитные функции, ускоряют обмен веществ и способствуют быстрому восстановлению после нагрузок.</p>
+							</li>
+							<li class="components__item swiper-slide">
+								<img src="./img/quality-list-4.jpg" alt="#">
+								<h3 class="components__title">Vitamins</h3>
+								<p class="components__notest">
+								Эти активные соединения играют ключевую роль в поддержании здоровья и равновесия в организме. Они стимулируют клеточное обновление, укрепляют защитные функции, ускоряют обмен веществ и способствуют быстрому восстановлению после нагрузок.</p>
+							</li>
+						</ul>
+					</div>
+				</p>
+			</div>
+		</section>
+	</main>
+
+	<script src="./scripts/main.js"></script>
 </body>
 
 </html>
