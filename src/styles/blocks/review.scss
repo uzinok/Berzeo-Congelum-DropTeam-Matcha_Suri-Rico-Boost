@@ -1,0 +1,121 @@
+.review {
+	overflow: hidden;
+	background-image: url(../../img/reviews-bg.jpg);
+	background-position: center;
+	background-size: cover;
+
+	& .page__title {
+		margin-bottom: 49px;
+	}
+}
+
+.review__swiper {
+	max-width: 388px;
+	margin: 0;
+	overflow: visible;
+}
+
+.review__list {
+	margin: 0;
+	padding: 0;
+}
+
+.review__item {
+	display: grid;
+	align-items: start;
+	grid-template-rows: auto auto 1fr auto;
+	box-sizing: border-box;
+	height: auto;
+	padding: 30px;
+	background-color: #ffffff;
+}
+
+.review__cite {
+	display: grid;
+	grid-template-areas: "ava author"
+		"ava check"
+		"ava star";
+	grid-template-columns: 56px 1fr;
+	margin-bottom: 7px;
+	gap: 0 14px;
+}
+
+.review__cite-ava {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: ava;
+	width: 56px;
+	height: 56px;
+	font-weight: 500;
+	font-size: 24px;
+	color: #ffffff;
+	background-color: #84ab31;
+	border-radius: 50%;
+}
+
+.review__cite-author {
+	grid-area: author;
+	max-width: 100%;
+	margin-bottom: 5px;
+	overflow: hidden;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.review__cite-check {
+	grid-area: check;
+	grid-column-start: 2;
+	margin-bottom: 9px;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 1;
+	color: #84ab31;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-right: 5px;
+		vertical-align: bottom;
+		background-image: url(../../img/check.svg);
+	}
+}
+
+.review__cite-star-wrap {
+	display: flex;
+	grid-area: star;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.review__cite-star {
+	width: 100px;
+	height: 15px;
+	margin-right: 9px;
+}
+
+.review__list-title {
+	margin-top: 0;
+	margin-bottom: 9px;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.review__list-notes {
+	margin-top: 0;
+	margin-bottom: 11px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.review__list-date {
+	margin-top: auto;
+	font-size: 14px;
+	line-height: 24px;
+	color: #cacaca;
+}
