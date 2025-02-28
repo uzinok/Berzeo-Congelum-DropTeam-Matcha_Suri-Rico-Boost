@@ -3,9 +3,13 @@
 }
 
 .top-products__swiper {
-	max-width: 303px;
-	margin: 0;
-	overflow: visible;
+	max-width: 990px;
+
+	@media (min-width: 1253px) {
+		max-width: 100%;
+		margin: 0;
+		overflow: visible;
+	}
 }
 
 .top-products__list {
@@ -47,5 +51,11 @@
 		height: 1px;
 		margin-top: 2px;
 		background-color: #84ab31;
+	}
+}
+
+.top-products__navigation-wrap {
+	@media (min-width: 1253px) {
+		display: none;
 	}
 }

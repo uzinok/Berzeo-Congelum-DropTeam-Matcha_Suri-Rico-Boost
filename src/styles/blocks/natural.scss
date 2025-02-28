@@ -1,5 +1,6 @@
 .natural {
 	overflow: hidden;
+
 	& .page__title {
 		&::after {
 			background-color: transparent;
@@ -9,14 +10,24 @@
 
 .natural__list {
 	padding: 0;
-	text-align: center;
 	list-style-type: none;
+	text-align: center;
 }
 
 .natural__swiper {
-	max-width: 375px;
-	margin-left: 0;
-	overflow: visible;
+	@media (min-width: 768px) {
+		max-width: 620px;
+	}
+
+	@media (min-width: 990px) {
+		max-width: 990px;
+	}
+
+	@media (min-width: 1253px) {
+		max-width: 376px;
+		margin: 0;
+		overflow: visible;
+	}
 }
 
 .natural__prodwrap {
@@ -66,4 +77,10 @@
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 18px;
+}
+
+.natural__navigation-wrap {
+	@media (min-width: 1253px) {
+		display: none;
+	}
 }

@@ -10,9 +10,13 @@
 }
 
 .review__swiper {
-	max-width: 388px;
-	margin: 0;
-	overflow: visible;
+	max-width: 990px;
+
+	@media (min-width: 1253px) {
+		max-width: 388px;
+		margin: 0;
+		overflow: visible;
+	}
 }
 
 .review__list {
@@ -118,4 +122,10 @@
 	font-size: 14px;
 	line-height: 24px;
 	color: #cacaca;
+}
+
+.review__navigation-wrap {
+	@media (min-width: 1253px) {
+		display: none;
+	}
 }

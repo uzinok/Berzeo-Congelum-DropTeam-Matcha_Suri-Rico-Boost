@@ -11,9 +11,13 @@
 }
 
 .components__swiper {
-	max-width: 445px;
-	margin: 0;
-	overflow: visible;
+	max-width: 990px;
+
+	@media (min-width: 1253px) {
+		max-width: 445px;
+		margin: 0;
+		overflow: visible;
+	}
 }
 
 .components__list {
@@ -50,4 +54,10 @@
 
 .components__notest {
 	line-height: 21px;
+}
+
+.components__navigation-wrap {
+	@media (min-width: 1253px) {
+		display: none;
+	}
 }

@@ -41,8 +41,12 @@
 	padding: 0;
 	background-color: transparent;
 	border: 0;
-	appearance: none;
 	cursor: pointer;
+	appearance: none;
+
+	@media (min-width: $min-lg) {
+		display: none;
+	}
 
 	@media (max-width: $max-lg) {
 		position: absolute;
@@ -69,7 +73,7 @@
 	}
 
 	&::after {
-		background-image: linear-gradient(to bottom, #000000 1px, transparent 1px, transparent 7px, #000000 7px, #000000 8px, transparent 8px, transparent 13px, #000000 14px);
+		background-image: linear-gradient(to bottom, #000000 1px, transparent 1px, transparent 7px, #000000 7px, #000000 8px, transparent 8px, transparent 13px, #000000 13px);
 	}
 }
 
@@ -84,15 +88,18 @@
 
 	@media (min-width: $min-lg) {
 		display: flex;
-		margin-right: 95px;
 		gap: 50px;
+
+		.page__header & {
+			margin-right: 95px;
+		}
 	}
 
 	& a {
-		color: #000000;
-		text-transform: uppercase;
-		text-decoration: none;
 		display: block;
 		padding: 5px 0;
+		color: inherit;
+		text-transform: uppercase;
+		text-decoration: none;
 	}
 }

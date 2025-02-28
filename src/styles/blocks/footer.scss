@@ -1,3 +1,37 @@
 .footer {
+	color: #ffffff;
 	background-color: #232323;
+}
+
+.footer__container {
+	padding-top: 40px;
+	padding-bottom: 48px;
+
+	@media (max-width: $max-lg) {
+		text-align: center;
+	}
+}
+
+.footer__top-line {
+	margin-bottom: 12px;
+
+	@media (min-width: $min-lg) {
+		display: flex;
+	}
+}
+
+.footer__logo {
+	& svg {
+		fill: #ffffff;
+	}
+}
+
+.footer__nav {
+	@media (max-width: $max-lg) {
+		display: none;
+	}
+
+	@media (min-width: $min-lg) {
+		margin-left: auto;
+	}
 }

@@ -19,9 +19,6 @@
 }
 
 .standarts__swiper {
-	max-width: 301px;
-	margin: 0;
-	overflow: visible;
 
 	@media (min-width: $min-lg) {
 		flex-grow: 1;
@@ -132,5 +129,11 @@
 		& img:last-child {
 			display: none;
 		}
+	}
+}
+
+.standards__navigation-wrap {
+	@media (min-width: $min-lg) {
+		display: none;
 	}
 }
