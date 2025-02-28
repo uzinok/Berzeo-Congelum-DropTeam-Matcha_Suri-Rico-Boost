@@ -8,6 +8,20 @@ document.querySelectorAll('a[href^="#"]:not(a[href="#"])').forEach(anchor => {
 	});
 });
 
+const nav = document.querySelector('.header__nav');
+const navList = document.querySelector('.header__nav .nav__list');
+const navToggle = document.querySelector('.nav__button-toggle');
+
+navToggle.addEventListener('click', () => {
+	nav.classList.toggle('nav--open');
+});
+
+navList.addEventListener('click', function (e) {
+	if (e.target.nodeName == 'A' && window.innerWidth <= 990) {
+		nav.classList.toggle('nav--open');
+	}
+});
+
 const heroSwiper = new Swiper('.hero__swiper', {
 	speed: 400,
 	spaceBetween: 14,

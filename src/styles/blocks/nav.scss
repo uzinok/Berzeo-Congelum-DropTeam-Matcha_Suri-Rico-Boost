@@ -103,3 +103,20 @@
 		text-decoration: none;
 	}
 }
+
+@media (max-width: $max-lg) {
+	.nav__list {
+		position: absolute;
+		top: 100%;
+		right: var(--offset-row);
+		left: var(--offset-row);
+		padding: 5px;
+		background-color: rgba(255, 255, 255, 0.7);
+		box-shadow: 0 0 3px #ffffff;
+		backdrop-filter: blur(2px);
+
+		.nav--open & {
+			display: block;
+		}
+	}
+}
