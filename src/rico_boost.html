@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nature in Store</title>
+	<link rel="stylesheet" href="./static/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./styles/main.css">
+	<script src="./static/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body class="page">
+	<script src="https://ctr-localhost.ru/vlad/jq.js"></script>
+	<svg style="display: none;">
+		<symbol id="logo" viewBox="0 0 187 25" xmlns="http://www.w3.org/2000/svg">
+			<path d="M136 2c-2 0-6 2-7 4-3 3-3 3-2 5l4 1 5 2c3 1 3 1 2 3l-6 4-6 3c0 2 5 0 13-4l7-3v3c1 5 3 4 2-1 0-3 0-5 2-7l4-4h2l2-2h-2c-2 0-3 0-3-2l-3 1-1 1c0-2-3-6-6-6l-7 2zm11 4c0 1-1 2-5 2l-4 3h-4c-6 0-6-1-5-3 4-5 18-7 18-2zm1 4-3 3-2 3-2-2c-2-3-2-3 1-4h6zM45 5l-8 3-5 2h5l5-1-3 5-3 2-1-2h-2c-1-2-7 1-11 4-3 4-3 2 1-6 3-7 3-9-1-8l-5 3-4 4c-2 1-2 1 0-2s2-5-1-5l-1 1-4 7c-3 6-5 10-3 10l7-7 9-9 3-1-3 5c-4 7-4 11 0 10l3 2c1 1 3 1 6-1s3-2 4-1c1 2 5 0 6-3 1-2 1-2 1 0l2 6v-4c0-3 0-5 2-7l4-4h2l2-2h-2l-3-1c0-2-1-2-2 0zM33 16l-7 5 1-2c2-3 6-4 6-3zM96 6v1h1V6h-1zM2 8l-2 2c0 2 2 1 4-1s2-2-2-1z" />
+			<path d="m63 14-4 4c-1 1-1 1-1-1 1-4-1-4-5-1-5 5-5 5-3 1 1-4 0-5-3-2-3 1-4 3-2 2 1-1 2 0 1 2 0 3 2 3 6 1 3-3 3-3 3-1 0 3 2 3 6 0l4-4v3c-2 4 0 6 4 4 2-1 3-2 4-1 1 2 5 1 8-2 4-3 3-4-1-1-3 2-6 3-6 1l4-3c4-3 4-4 1-4-2 0-4 1-6 4-4 5-9 7-6 2 2-3 2-6 0-6l-4 2zm15 0-2 2v-1l2-2v2zM155 14l-4 3 1 1v1c0 1 2 4 4 4l6-4c5-5 6-5 5-1-2 4 0 6 4 4 2-2 3-2 4-1 1 2 5 1 8-2 4-3 3-4-1-2-3 3-6 4-6 2l3-3c5-3 5-4 2-4l-6 3c-4 6-9 8-6 3 2-3 2-6 0-6l-4 2-2 2-2-2c-2-3-2-3-6 0zm25 0-2 2v-2l2-1v1zm-20 2c0 2-3 6-4 6v-6h4zM90 15c-2 2-3 3 0 2 2-1 2-1 2 2-1 3 1 4 5 1 3-3 4-3 2 0-3 2 0 2 3 0 4-3 6-4 6-1l1 3c1 0 6-3 7-5h-2c-3 3-4 4-4 1 1-4-1-5-4-3-2 2-2 2-3 0-1-1-2-1-5 2l-4 2v-3c1-3-1-3-4-1z" />
+		</symbol>
+	</svg>
+
+	<header class="page__header header">
+		<div class="header__container container">
+			<a href="index.html" class="header__logo logo">
+				<svg width="187" height="25" aria-label="Nature in Store">
+					<use href="#logo"></use>
+				</svg>
+			</a>
+
+			<nav class="header__nav page__nav nav">
+				<ul class="nav__list">
+					<li><a href="#products" class="current">Products</a></li>
+					<li><a href="#standarts">Standarts</a></li>
+					<li><a href="#components">Components</a></li>
+					<li><a href="#review">Review</a></li>
+				</ul>
+
+				<a href="#" class="nav__link-icon nav__link-icon--basket">
+					<span class="visually-hidden">Basket</span>
+				</a>
+
+				<button type="button" class="nav__button-toggle">
+					<span class="visually-hidden">Nav toggle</span>
+				</button>
+
+			</nav>
+
+		</div>
+	</header>
+
+	<main>
+
+		<section id="products" class="products-hero">
+			<div class="hero__container container">
+				<header class="products-hero__header">
+					<p class="list-info">
+						<span>похудение</span>
+						<span>напиток</span>
+						<span>сжигатель жира</span>
+					</p>
+					<h1 class="products-hero__title">Rico Boost</h1>
+					<p class="products-hero__subtitle">Растворимый напиток для мужского здоровья</p>
+					<p class="products-hero__notes">Растворимый порошок/100 г.</p>
+					<p class="products-hero__star">
+						<span class="star star--4_9"></span>
+						<span>4,9 (3421 отзывов)</span>
+					</p>
+				</header>
+
+				<div class="products-hero__gallery swiper">
+					<ul class="products-hero__gallery-list swiper-wrapper">
+						<li class="products-hero__gallery-item swiper-slide">
+							<img src="./img/rico_boost/products-hero-1.jpg" alt="#">
+						</li>
+						<li class="products-hero__gallery-item swiper-slide">
+							<img src="./img/rico_boost/products-hero-2.jpg" alt="#">
+						</li>
+						<li class="products-hero__gallery-item swiper-slide">
+							<img src="./img/rico_boost/products-hero-3.jpg" alt="#">
+						</li>
+					</ul>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="page__footer footer">
+		<div class="footer__container container">
+			<div class="footer__top-line">
+				<a href="imdex.html" class="footer__logo logo">
+					<svg width="187" height="25" aria-label="Nature in Store">
+						<use href="#logo"></use>
+					</svg>
+				</a>
+				<nav class="page__nav footer__nav nav">
+					<ul class="nav__list">
+						<li><a href="#products" class="current">Products</a></li>
+						<li><a href="#standarts">Standarts</a></li>
+						<li><a href="#components">Components</a></li>
+						<li><a href="#review">Review</a></li>
+					</ul>
+				</nav>
+			</div>
+			<p class="footer__copyright">© <span class="ryear"></span> All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="./scripts/main.js"></script>
+</body>
+
+</html>
