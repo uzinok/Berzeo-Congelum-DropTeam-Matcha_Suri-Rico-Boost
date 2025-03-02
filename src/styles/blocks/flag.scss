@@ -1,0 +1,27 @@
+.flag {
+	position: absolute;
+	right: 0;
+	height: 25px;
+	padding: 0 8px 0 1px;
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-transform: uppercase;
+	background-color: #000000;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -14px;
+		width: 15px;
+		height: 100%;
+		background-color: inherit;
+		mask-image: url(../../img/flag-before.svg);
+		mask-position: left center;
+	}
+
+	&--green {
+		background-color: #92b549;
+	}
+}

@@ -1,6 +1,6 @@
 // scroll
 document.querySelectorAll('a[href^="#"]:not(a[href="#"])').forEach(anchor => {
-	anchor.addEventListener('click', function (e) {
+	anchor.addEventListener('click', function(e) {
 		e.preventDefault();
 		document.querySelector(this.getAttribute('href')).scrollIntoView({
 			behavior: 'smooth',
@@ -17,7 +17,7 @@ navToggle.addEventListener('click', () => {
 	nav.classList.toggle('nav--open');
 });
 
-navList.addEventListener('click', function (e) {
+navList.addEventListener('click', function(e) {
 	if (e.target.nodeName == 'A' && window.innerWidth <= 990) {
 		nav.classList.toggle('nav--open');
 	}
@@ -174,9 +174,17 @@ if (document.querySelector('.products-hero__gallery')) {
 			el: '.swiper-pagination',
 			type: 'bullets',
 			clickable: true,
-			renderBullet: function (index, className) {
+			renderBullet: function(index, className) {
 				return '<span class="' + className + '" aria-label="Go to stide ' + (index + 1) + '"><img src="./img/rico_boost/products-hero-pr-' + (index + 1) + '.jpg" alt="#" aria-hidden="true"></span>';
 			},
 		},
 	});
 }
+
+// details
+window.addEventListener('load', () => {
+	const detailsList = document.querySelectorAll('.details');
+	detailsList.forEach(elem => {
+		let details = new Details(elem, 300);
+	});
+});

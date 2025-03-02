@@ -1,0 +1,87 @@
+.banner {
+	position: relative;
+	box-sizing: border-box;
+	padding: 17px 8px 346px;
+	background-position: center;
+	background-size: cover;
+
+	@media (max-width: $max-lg) {
+		text-align: center;
+	}
+
+	@media (min-width: $min-lg) {
+		padding: 90px 50% 118px 58px;
+	}
+
+	&--macha_suri {
+		background-image: url(../../img/hero-slider__bg-matcha_suri@mob.jpg);
+
+		@media (min-width: $min-lg) {
+			background-image: url(../../img/hero-slider__bg-matcha_suri.jpg);
+		}
+	}
+
+	&--congelum {
+		background-image: url(../../img/hero-slider__bg-congelum@mob.jpg);
+
+		@media (min-width: $min-lg) {
+			background-image: url(../../img/hero-slider__bg-congelum.jpg);
+		}
+	}
+
+	&--rico_boost {
+		background-image: url(../../img/hero-slider__bg-rico_boost@mob.jpg);
+
+		@media (min-width: $min-lg) {
+			background-image: url(../../img/hero-slider__bg-rico_boost.jpg);
+		}
+	}
+
+	&--berzeo {
+		background-image: url(../../img/hero-slider__bg-berzeo@mob.jpg);
+
+		@media (min-width: $min-lg) {
+			background-image: url(../../img/hero-slider__bg-berzeo.jpg);
+		}
+	}
+}
+
+.banner__title {
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 24px;
+	line-height: 30px;
+
+	@media (min-width: $min-lg) {
+		margin-bottom: 12px;
+		font-size: 64px;
+		line-height: 69px;
+	}
+
+	& span {
+		color: #84ab31;
+	}
+}
+
+.banner__notes {
+	margin: 0;
+	line-height: 20px;
+
+	@media (min-width: $min-lg) {
+		margin-bottom: 43px;
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+.banner__button {
+
+	@media (max-width: $max-lg) {
+		position: absolute;
+		bottom: 29px;
+		left: 50%;
+		box-sizing: border-box;
+		width: 90%;
+		transform: translateX(-50%);
+	}
+}

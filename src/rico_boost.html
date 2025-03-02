@@ -51,7 +51,7 @@
 	<main>
 
 		<section id="products" class="products-hero">
-			<div class="hero__container container">
+			<div class="products-hero__container container">
 				<header class="products-hero__header">
 					<p class="list-info">
 						<span>похудение</span>
@@ -61,8 +61,8 @@
 					<h1 class="products-hero__title">Rico Boost</h1>
 					<p class="products-hero__subtitle">Растворимый напиток для мужского здоровья</p>
 					<p class="products-hero__notes">Растворимый порошок/100 г.</p>
-					<p class="products-hero__star">
-						<span class="star star--4_9"></span>
+					<p class="products-hero__star-wrap">
+						<span class="products-hero__star star star--4_9"></span>
 						<span>4,9 (3421 отзывов)</span>
 					</p>
 				</header>
@@ -71,6 +71,8 @@
 					<ul class="products-hero__gallery-list swiper-wrapper">
 						<li class="products-hero__gallery-item swiper-slide">
 							<img src="./img/rico_boost/products-hero-1.jpg" alt="#">
+							<span class="products-hero__gallery-flag flag flag--green">organic</span>
+							<span class="products-hero__gallery-flag flag">Bestseller</span>
 						</li>
 						<li class="products-hero__gallery-item swiper-slide">
 							<img src="./img/rico_boost/products-hero-2.jpg" alt="#">
@@ -79,7 +81,68 @@
 							<img src="./img/rico_boost/products-hero-3.jpg" alt="#">
 						</li>
 					</ul>
-					<div class="swiper-pagination"></div>
+					<div class="products-hero__pagination swiper-pagination"></div>
+				</div>
+
+				<form action="#" class="basket-form">
+					<div class="basket-form__inner">
+						<button type="button" class="basket-form__button-count basket-form__button-count--lower">
+							<span class="visually-hidden">lower</span>
+						</button>
+						<input type="number" name="basket-count" id="basket-count" class="basket-form__input" min="0" value="1">
+						<button type="button" class="basket-form__button-count basket-form__button-count--add">
+							<span class="visually-hidden">add</span>
+						</button>
+					</div>
+					<button type="submit" class="basket-form__button button">Добавить в корзину</button>
+				</form>
+
+				<ul class="products-hero__list">
+					<li class="products-hero__item">
+						<details class="products-hero__details details" open>
+							<summary class="details__summary products-hero__summary products-hero__summary--description">Описание</summary>
+							<div class="details__content products-hero__details-content">
+								Воспаление предстательной железы и проблемы с потенцией распространенная проблема для мужчин в возрасте от 35 лет. Эти проблемы влияют не только на уверенность в себе но и общее состояние здоровья, психическое состояния и отношения с близкими.
+								<br>
+								С возрастом проблема усугубляется, а такие факторы как постоянные стрессы, загрязненная окружающая среда только ухудшают ситуацию.
+							</div>
+						</details>
+					</li>
+					<li class="products-hero__item">
+						<details class="products-hero__details details">
+							<summary class="details__summary products-hero__summary products-hero__summary--compound">Соединение</summary>
+							<div class="details__content products-hero__details-content">
+								Аспарагиновая кислота, Перуанская мака, ликопин, Пажитник, Ашваганда (индийский женьшень), Кислое апельсиновое дерево, L-аргинин
+							</div>
+						</details>
+					</li>
+					<li class="products-hero__item">
+						<details class="products-hero__details details">
+							<summary class="details__summary products-hero__summary products-hero__summary--use">Как использовать</summary>
+							<div class="details__content products-hero__details-content">
+								Растворите 1 столовую ложку Rico Boost в 100 мл воды. Принимать 1-2 раза в день. Минимальный курс лечения: 30 дней.
+							</div>
+						</details>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="banner banner--rico_boost">
+					<p class="list-info">
+						<span>Мужская сила</span>
+						<span>Здоровье простаты</span>
+						<span>Напиток</span>
+					</p>
+					<h2 class="banner__title">
+						<span>Nature's</span>
+						Care For Her &amp; Him
+					</h2>
+					<p class="banner__notes">Натуральное решение для здоровья и красоты. Сделайте заботу о себе частью своей
+						жизни и подарите это своим близким.</p>
+					<a href="rico_boost.html" class="banner__button button">Заказать сейчас</a>
 				</div>
 			</div>
 		</section>
@@ -106,7 +169,7 @@
 			<p class="footer__copyright">© <span class="ryear"></span> All rights reserved.</p>
 		</div>
 	</footer>
-
+	<script src="./scripts/details.js"></script>
 	<script src="./scripts/main.js"></script>
 </body>
 

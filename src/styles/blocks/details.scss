@@ -1,0 +1,19 @@
+.details {
+	transition: height var(--transition-duration) var(--transition-function);
+}
+
+.details--close .details__content {
+	opacity: 0;
+}
+
+.details--open .details__content {
+	opacity: 1;
+}
+
+.details__content {
+	transition: opacity var(--transition-duration) var(--transition-function);
+}
+
+.details__summary {
+	cursor: pointer;
+}
