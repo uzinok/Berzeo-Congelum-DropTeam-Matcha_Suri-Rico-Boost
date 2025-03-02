@@ -181,6 +181,23 @@ if (document.querySelector('.products-hero__gallery')) {
 	});
 }
 
+if (document.querySelector('.advantages__swiper')) {
+	const advantagesSwiper = new Swiper('.advantages__swiper', {
+		speed: 400,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.advantages__navigation-prev',
+			prevEl: '.advantages__navigation-next',
+		},
+
+		breakpoints: {
+			600: {
+				slidesPerView: 2,
+			},
+		}
+	});
+}
+
 // details
 window.addEventListener('load', () => {
 	const detailsList = document.querySelectorAll('.details');

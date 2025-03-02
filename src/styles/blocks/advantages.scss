@@ -1,0 +1,131 @@
+.advantages__container {
+	@media (min-width: 600px) {
+		display: grid;
+		grid-template-areas:
+			"title after"
+			"subtitle after"
+			"notes after"
+			"listtitle listtitle"
+			"swiper swiper"
+			"pagination pagination";
+		grid-template-columns: 1fr auto;
+		gap: 0 10px;
+	}
+}
+
+.advantages__title {
+	margin-bottom: 6px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 36px;
+
+	@media (min-width: 600px) {
+		grid-area: title;
+	}
+}
+
+.advantages__subtitle {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+
+	@media (min-width: 600px) {
+		grid-area: subtitle;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		width: 204px;
+		height: 1px;
+		margin-top: 11px;
+		background-color: #84ab31;
+	}
+}
+
+.advantages__notes {
+	line-height: 24px;
+
+	@media (min-width: 600px) {
+		grid-area: notes;
+	}
+
+	& p {
+		margin-top: 0;
+
+		&:last-of-type {
+			margin-bottom: 37px;
+		}
+	}
+}
+
+.advantages__after {
+	position: relative;
+	width: 268px;
+	height: 356px;
+	margin-bottom: 27px;
+
+	@media (min-width: 600px) {
+		grid-area: after;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -24px;
+		right: -32px;
+		box-sizing: border-box;
+		width: 223px;
+		height: 352px;
+		border: 16px solid #84ab31;
+	}
+}
+
+.advantages__list-title {
+	margin-bottom: 20px;
+
+	@media (min-width: 600px) {
+		grid-area: listtitle;
+	}
+}
+
+.advantages__swiper {
+	@media (min-width: 600px) {
+		grid-area: swiper;
+	}
+}
+
+.advantages__list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.advantages__item {
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 5px;
+	padding-left: 28px;
+	font-size: 14px;
+	line-height: 18px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 24px;
+		height: 25px;
+		background-image: url(../../img/advantages-check.svg);
+		background-position: center;
+		background-size: contain;
+	}
+}
+
+.advantages__navigation-wrap {
+
+	@media (min-width: 600px) {
+		grid-area: pagination;
+	}
+}
