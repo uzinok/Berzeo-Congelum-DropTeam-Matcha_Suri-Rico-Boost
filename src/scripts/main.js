@@ -194,6 +194,9 @@ if (document.querySelector('.advantages__swiper')) {
 			600: {
 				slidesPerView: 2,
 			},
+			990: {
+				slidesPerView: 5,
+			}
 		}
 	});
 }
