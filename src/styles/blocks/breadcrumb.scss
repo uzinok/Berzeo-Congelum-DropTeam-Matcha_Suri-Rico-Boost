@@ -1,0 +1,47 @@
+.breadcrumb {
+	position: relative;
+	z-index: 2;
+	display: none;
+
+	@media (min-width: $min-lg) {
+		display: block;
+		margin-top: -6px;
+	}
+}
+
+@media (min-width: $min-lg) {
+	.breadcrumb .breadcrumb__container {
+		padding: 0;
+	}
+}
+
+.breadcrumb__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	margin-left: -3px;
+	padding: 0;
+	list-style-type: none;
+}
+
+.breadcrumb__item {
+	& a {
+		font-size: 14px;
+		color: inherit;
+		text-decoration: none;
+
+	}
+
+	&:first-child a {
+		color: #8b8b8b;
+	}
+
+	&:not(:last-child) {
+		&::after {
+			content: ">";
+			display: inline-block;
+			margin: 0 3px;
+			vertical-align: middle;
+		}
+	}
+}

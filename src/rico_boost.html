@@ -48,15 +48,22 @@
 		</div>
 	</header>
 
-	<main>
+	<main><section class="breadcrumb">
+		<div class="breadcrumb__container container">
+			<ol class="breadcrumb__list">
+				<li class="breadcrumb__item"><a href="./index.html">Home</a></li>
+				<li class="breadcrumb__item"><a href="./rico_boost.html">Rico Boost</a></li>
+			</ol>
+		</div>
+	</section>
 
 		<section id="products" class="products-hero">
 			<div class="products-hero__container container">
 				<header class="products-hero__header">
-					<p class="list-info">
-						<span>похудение</span>
-						<span>напиток</span>
-						<span>сжигатель жира</span>
+					<p class="products-hero__list-info list-info">
+						<span>Мужская сила</span>
+						<span>Здоровье простаты</span>
+						<span>Напиток</span>
 					</p>
 					<h1 class="products-hero__title">Rico Boost</h1>
 					<p class="products-hero__subtitle">Растворимый напиток для мужского здоровья</p>
@@ -67,20 +74,22 @@
 					</p>
 				</header>
 
-				<div class="products-hero__gallery swiper">
-					<ul class="products-hero__gallery-list swiper-wrapper">
-						<li class="products-hero__gallery-item swiper-slide">
-							<img src="./img/rico_boost/products-hero-1.jpg" alt="#">
-							<span class="products-hero__gallery-flag flag flag--green">organic</span>
-							<span class="products-hero__gallery-flag flag">Bestseller</span>
-						</li>
-						<li class="products-hero__gallery-item swiper-slide">
-							<img src="./img/rico_boost/products-hero-2.jpg" alt="#">
-						</li>
-						<li class="products-hero__gallery-item swiper-slide">
-							<img src="./img/rico_boost/products-hero-3.jpg" alt="#">
-						</li>
-					</ul>
+				<div class="products-hero__gallery-wrapper">
+					<span class="products-hero__gallery-flag flag flag--green">organic</span>
+					<span class="products-hero__gallery-flag flag">Bestseller</span>
+					<div class="products-hero__gallery swiper">
+						<ul class="products-hero__gallery-list swiper-wrapper">
+							<li class="products-hero__gallery-item swiper-slide">
+								<img src="./img/rico_boost/products-hero-1.jpg" alt="#">
+							</li>
+							<li class="products-hero__gallery-item swiper-slide">
+								<img src="./img/rico_boost/products-hero-2.jpg" alt="#">
+							</li>
+							<li class="products-hero__gallery-item swiper-slide">
+								<img src="./img/rico_boost/products-hero-3.jpg" alt="#">
+							</li>
+						</ul>
+					</div>
 					<div class="products-hero__pagination swiper-pagination"></div>
 				</div>
 
@@ -142,7 +151,7 @@
 					</h2>
 					<p class="banner__notes">Натуральное решение для здоровья и красоты. Сделайте заботу о себе частью своей
 						жизни и подарите это своим близким.</p>
-					<a href="rico_boost.html" class="banner__button button">Заказать сейчас</a>
+					<a href="#products" class="banner__button button">Заказать сейчас</a>
 				</div>
 			</div>
 		</section>

@@ -112,8 +112,14 @@
 }
 
 .basket-form__button {
-	min-width: 187px;
 	padding: 16px 20px;
 	font-size: 13px;
+	min-width: 187px;
 	text-align: center;
+
+	@media (min-width: $min-lg) {
+		min-width: 226px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 }

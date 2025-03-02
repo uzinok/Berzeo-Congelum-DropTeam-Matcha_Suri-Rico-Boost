@@ -1,19 +1,8 @@
-html,
 body {
-	height: 100%;
-}
-
-body {
-	display: flex;
-	flex-direction: column;
 	min-width: 320px;
 	max-width: 100%;
 	margin: 0;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-
-	& footer {
-		margin-top: auto;
-	}
 }
 
 img {
