@@ -227,8 +227,6 @@ if (document.querySelector('.standarts-prod__swiper')) {
 
 	const standartsProdSwiperElement = document.querySelector('.standarts-prod__swiper');
 	const toggleClassSwiperElement = (check) => {
-		console.log(toggleClassSwiperElement);
-
 		standartsProdSwiperElement.querySelector('.standarts-prod__list').classList.toggle('swiper-wrapper', check);
 		standartsProdSwiperElement.querySelectorAll('.standarts-prod__item').forEach(element => {
 			element.classList.toggle('swiper-slide', check);
@@ -262,14 +260,12 @@ if (document.querySelector('.standarts-prod__swiper')) {
 		const screenWidth = window.innerWidth;
 
 		if (screenWidth <= 989 && standartsProdSwiper === undefined) {
-			console.log('init');
-
-			standartsProdSwiper = new Swiper('.standarts-prod__swiper', options);
 			toggleClassSwiperElement(true);
+			standartsProdSwiper = new Swiper('.standarts-prod__swiper', options);
 		} else if (screenWidth > 989 && standartsProdSwiper !== undefined) {
+			toggleClassSwiperElement(false);
 			standartsProdSwiper.destroy();
 			standartsProdSwiper = undefined;
-			toggleClassSwiperElement(false);
 		}
 	}
 
