@@ -182,7 +182,17 @@ if (document.querySelector('.products-hero__gallery')) {
 }
 
 if (document.querySelector('.advantages__swiper')) {
-	const advantagesSwiper = new Swiper('.advantages__swiper', {
+
+	const advantagesSwiperElement = document.querySelector('.advantages__swiper');
+	const toggleClassSwiperElement = (check) => {
+		advantagesSwiperElement.querySelector('.advantages__list').classList.toggle('swiper-wrapper', check);
+		advantagesSwiperElement.querySelectorAll('.advantages__item').forEach(element => {
+			element.classList.toggle('swiper-slide', check);
+		});
+	}
+	let advantagesSwiper = undefined;
+
+	const advantagesSwiperOptions = {
 		speed: 400,
 		spaceBetween: 10,
 		navigation: {
@@ -194,11 +204,78 @@ if (document.querySelector('.advantages__swiper')) {
 			600: {
 				slidesPerView: 2,
 			},
-			990: {
-				slidesPerView: 5,
+		}
+	}
+	const initAdvSW = () => {
+		const screenWidth = window.innerWidth;
+
+		if (screenWidth <= 989 && advantagesSwiper === undefined) {
+			advantagesSwiper = new Swiper('.advantages__swiper', advantagesSwiperOptions);
+			toggleClassSwiperElement(true);
+		} else if (screenWidth > 989 && advantagesSwiper !== undefined) {
+			advantagesSwiper.destroy();
+			advantagesSwiper = undefined;
+			toggleClassSwiperElement(false);
+		}
+	}
+
+	initAdvSW();
+	window.addEventListener('resize', initAdvSW)
+}
+
+if (document.querySelector('.standarts-prod__swiper')) {
+
+	const standartsProdSwiperElement = document.querySelector('.standarts-prod__swiper');
+	const toggleClassSwiperElement = (check) => {
+		console.log(toggleClassSwiperElement);
+
+		standartsProdSwiperElement.querySelector('.standarts-prod__list').classList.toggle('swiper-wrapper', check);
+		standartsProdSwiperElement.querySelectorAll('.standarts-prod__item').forEach(element => {
+			element.classList.toggle('swiper-slide', check);
+		});
+	}
+	let standartsProdSwiper = undefined;
+
+	const options = {
+		speed: 400,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.standards__navigation-prev',
+			prevEl: '.standards__navigation-next',
+		},
+
+		breakpoints: {
+			600: {
+				slidesPerView: 2,
+				spaceBetween: 26,
+			},
+			850: {
+				slidesPerView: 3,
+				spaceBetween: 26,
 			}
 		}
-	});
+	}
+
+	const initAdvSW = () => {
+		console.log('initAdvSW');
+
+		const screenWidth = window.innerWidth;
+
+		if (screenWidth <= 989 && standartsProdSwiper === undefined) {
+			console.log('init');
+
+			standartsProdSwiper = new Swiper('.standarts-prod__swiper', options);
+			toggleClassSwiperElement(true);
+		} else if (screenWidth > 989 && standartsProdSwiper !== undefined) {
+			standartsProdSwiper.destroy();
+			standartsProdSwiper = undefined;
+			toggleClassSwiperElement(false);
+		}
+	}
+
+	initAdvSW();
+	window.addEventListener('resize', initAdvSW)
+	// const standartsProdSwiper = new Swiper('.standarts-prod__swiper', options);
 }
 
 // details

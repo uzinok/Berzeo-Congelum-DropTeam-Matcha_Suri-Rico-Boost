@@ -1,4 +1,10 @@
-.advantages__container {
+.advantages {
+	background-color: #f2f9f7;
+}
+
+div.advantages__container {
+	position: relative;
+
 	@media (min-width: 600px) {
 		display: grid;
 		grid-template-areas:
@@ -20,6 +26,8 @@
 			"listtitle after"
 			"swiper after"
 			"pagination after";
+		padding-top: 66px;
+		gap: 0 30px;
 	}
 }
 
@@ -31,6 +39,8 @@
 
 	@media (min-width: 600px) {
 		grid-area: title;
+		font-size: 30px;
+		line-height: 36px;
 	}
 }
 
@@ -42,6 +52,12 @@
 
 	@media (min-width: 600px) {
 		grid-area: subtitle;
+	}
+
+	@media (min-width: $max-lg) {
+		max-width: 480px;
+		font-size: 24px;
+		line-height: 28px;
 	}
 
 	&::after {
@@ -66,6 +82,10 @@
 
 		&:last-of-type {
 			margin-bottom: 37px;
+
+			@media (min-width: $min-lg) {
+				margin-bottom: 46px;
+			}
 		}
 	}
 }
@@ -77,7 +97,19 @@
 	margin-bottom: 27px;
 
 	@media (min-width: 600px) {
+		position: sticky;
+		top: 0;
 		grid-area: after;
+	}
+
+	@media (min-width: $min-md) {
+		width: 300px;
+		height: 400px;
+	}
+
+	@media (min-width: 1024px) {
+		width: 494px;
+		height: 658px;
 	}
 
 	&::before {
@@ -89,6 +121,13 @@
 		width: 223px;
 		height: 352px;
 		border: 16px solid #84ab31;
+
+		@media (min-width: 1024px) {
+			top: -39px;
+			right: -57px;
+			width: 411px;
+			height: 651px;
+		}
 	}
 }
 
@@ -110,6 +149,12 @@
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+
+	@media (min-width: $min-lg) {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 30px 36px;
+	}
 }
 
 .advantages__item {

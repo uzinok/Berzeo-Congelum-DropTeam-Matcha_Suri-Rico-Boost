@@ -1,0 +1,73 @@
+.standarts-prod {
+	background-color: #f2f9f7;
+	overflow: hidden;
+}
+
+.standarts-prod__subtitle {
+	font-size: 16px;
+	line-height: 24px;
+	color: #84ab31;
+	text-transform: uppercase;
+}
+
+.standarts-prod__list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.standarts-prod__item {
+	box-sizing: border-box;
+	padding-top: 15px;
+
+	@media (min-width: $min-lg) {
+		height: auto;
+		padding: 7px 0 70px 5px;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		width: 94px;
+		height: 79px;
+		margin-bottom: 8px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&--clinically::before {
+		background-image: url(../../img/standarts-list__clinically.svg);
+	}
+
+	&--only::before {
+		background-image: url(../../img/standarts-list__only.svg);
+	}
+
+	&--quality::before {
+		background-image: url(../../img/standarts-list__quality.svg);
+	}
+
+	&--gmo::before {
+		background-image: url(../../img/standarts-list__gmo.svg);
+	}
+}
+
+.standarts-prod__list-title {
+	margin-top: 0;
+	margin-bottom: 14px;
+	font-size: 24px;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 63px;
+		height: 1px;
+		margin-top: 4px;
+		background-color: #84ab31;
+	}
+}
+
+.standarts-prod__list-notes {
+	margin-top: 0;
+	margin-bottom: 0;
+}
