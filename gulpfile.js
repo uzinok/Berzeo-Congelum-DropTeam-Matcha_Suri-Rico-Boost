@@ -6,12 +6,20 @@ import {
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 
+import rename from 'gulp-rename';
+
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
+import csso from 'postcss-csso';
 import gcmq from 'gulp-group-css-media-queries';
+
+import {
+	nunjucksCompile
+} from 'gulp-nunjucks';
+import htmlmin from 'gulp-htmlmin';
 
 import babel from 'gulp-babel';
 import minify from 'gulp-minify';
@@ -68,14 +76,14 @@ export function clean(done) {
 
 export function copy() {
 	return src([
-			"./src/fonts/*.{woff2,woff}",
-			"./src/*.ico",
-			"./src/img/**/*.{svg,jpg,jpeg,png,webp,avif}",
-			"./src/video/**/*.{mp4,webm}",
-			"./src/static/**/*.{css,js}",
-		], {
-			base: paths.src
-		})
+		"./src/fonts/*.{woff2,woff}",
+		"./src/*.ico",
+		"./src/img/**/*.{svg,jpg,jpeg,png,webp,avif}",
+		"./src/video/**/*.{mp4,webm}",
+		"./src/static/**/*.{css,js}",
+	], {
+		base: paths.src
+	})
 		.pipe(dest(paths.dest));
 }
 
@@ -88,14 +96,22 @@ export function styles() {
 			postUrl({
 				assetsPath: '../'
 			}),
-			autoprefixer()
+			autoprefixer(),
+			csso()
 		]))
+		.pipe(rename({
+			suffix: '.min'
+		}))
 		.pipe(dest(paths.styles.dest))
 		.pipe(browserSync.stream());
 }
 
 export function html() {
 	return src(paths.html.src)
+		.pipe(htmlmin({
+			removeComments: false,
+			collapseWhitespace: true
+		}))
 		.pipe(dest(paths.html.dest))
 		.pipe(browserSync.stream());
 }
@@ -171,15 +187,15 @@ export function createRastr() {
 				}
 			}, {
 				format: "webp"
-			}, ]
+			},]
 		}))
 		.pipe(dest(paths.img.src + "/img/"));
 }
 
 export function optiImg() {
 	return src(paths.img.src + "/**/*.{png,jpg,svg}", {
-			base: paths.src
-		})
+		base: paths.src
+	})
 		.pipe(imagemin([
 			gifsicle({
 				interlaced: true
