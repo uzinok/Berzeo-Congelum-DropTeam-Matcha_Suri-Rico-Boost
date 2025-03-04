@@ -1,6 +1,6 @@
 // scroll
 document.querySelectorAll('a[href^="#"]:not(a[href="#"])').forEach(anchor => {
-	anchor.addEventListener('click', function(e) {
+	anchor.addEventListener('click', function (e) {
 		e.preventDefault();
 		document.querySelector(this.getAttribute('href')).scrollIntoView({
 			behavior: 'smooth',
@@ -17,7 +17,7 @@ navToggle.addEventListener('click', () => {
 	nav.classList.toggle('nav--open');
 });
 
-navList.addEventListener('click', function(e) {
+navList.addEventListener('click', function (e) {
 	if (e.target.nodeName == 'A' && window.innerWidth <= 990) {
 		nav.classList.toggle('nav--open');
 	}
@@ -174,7 +174,7 @@ if (document.querySelector('.products-hero__gallery')) {
 			el: '.swiper-pagination',
 			type: 'bullets',
 			clickable: true,
-			renderBullet: function(index, className) {
+			renderBullet: function (index, className) {
 				return '<span class="' + className + '" aria-label="Go to stide ' + (index + 1) + '"><img src="./img/rico_boost/products-hero-pr-' + (index + 1) + '.jpg" alt="#" aria-hidden="true"></span>';
 			},
 		},
@@ -186,9 +186,6 @@ if (document.querySelector('.advantages__swiper')) {
 	const advantagesSwiperElement = document.querySelector('.advantages__swiper');
 	const toggleClassSwiperElement = (check) => {
 		advantagesSwiperElement.querySelector('.advantages__list').classList.toggle('swiper-wrapper', check);
-		advantagesSwiperElement.querySelectorAll('.advantages__item').forEach(element => {
-			element.classList.toggle('swiper-slide', check);
-		});
 	}
 	let advantagesSwiper = undefined;
 
@@ -210,8 +207,8 @@ if (document.querySelector('.advantages__swiper')) {
 		const screenWidth = window.innerWidth;
 
 		if (screenWidth <= 989 && advantagesSwiper === undefined) {
-			advantagesSwiper = new Swiper('.advantages__swiper', advantagesSwiperOptions);
 			toggleClassSwiperElement(true);
+			advantagesSwiper = new Swiper('.advantages__swiper', advantagesSwiperOptions);
 		} else if (screenWidth > 989 && advantagesSwiper !== undefined) {
 			advantagesSwiper.destroy();
 			advantagesSwiper = undefined;
@@ -228,9 +225,6 @@ if (document.querySelector('.standarts-prod__swiper')) {
 	const standartsProdSwiperElement = document.querySelector('.standarts-prod__swiper');
 	const toggleClassSwiperElement = (check) => {
 		standartsProdSwiperElement.querySelector('.standarts-prod__list').classList.toggle('swiper-wrapper', check);
-		standartsProdSwiperElement.querySelectorAll('.standarts-prod__item').forEach(element => {
-			element.classList.toggle('swiper-slide', check);
-		});
 	}
 	let standartsProdSwiper = undefined;
 
@@ -254,24 +248,43 @@ if (document.querySelector('.standarts-prod__swiper')) {
 		}
 	}
 
-	const initAdvSW = () => {
-		console.log('initAdvSW');
+	const initStPrSW = () => {
 
 		const screenWidth = window.innerWidth;
 
-		if (screenWidth <= 989 && standartsProdSwiper === undefined) {
+		if (screenWidth <= 989 && standartsProdSwiper == undefined) {
 			toggleClassSwiperElement(true);
 			standartsProdSwiper = new Swiper('.standarts-prod__swiper', options);
-		} else if (screenWidth > 989 && standartsProdSwiper !== undefined) {
+		} else if (screenWidth > 989 && standartsProdSwiper != undefined) {
 			toggleClassSwiperElement(false);
 			standartsProdSwiper.destroy();
 			standartsProdSwiper = undefined;
 		}
 	}
 
-	initAdvSW();
-	window.addEventListener('resize', initAdvSW)
-	// const standartsProdSwiper = new Swiper('.standarts-prod__swiper', options);
+	initStPrSW();
+	window.addEventListener('resize', initStPrSW)
+}
+
+if (document.querySelector('.other-products__swiper')) {
+	const topProductsSwiper = new Swiper('.other-products__swiper', {
+		speed: 400,
+		spaceBetween: 18,
+		navigation: {
+			nextEl: '.other-products__navigation-prev',
+			prevEl: '.other-products__navigation-next',
+		},
+
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			990: {
+				slidesPerView: 3,
+				spaceBetween: 14,
+			}
+		}
+	});
 }
 
 // details

@@ -1,7 +1,15 @@
 .standarts-prod {
-	background-color: #f2f9f7;
+	margin-bottom: -280px;
+	padding-bottom: 280px;
 	overflow: hidden;
+	background-color: #f2f9f7;
+
+	@media (min-width: $min-lg) {
+		margin-bottom: -290px;
+		padding-bottom: 290px;
+	}
 }
+
 
 .standarts-prod__subtitle {
 	font-size: 16px;
@@ -14,6 +22,12 @@
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+
+	@media (min-width: $min-lg) {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 42px;
+	}
 }
 
 .standarts-prod__item {
@@ -22,7 +36,11 @@
 
 	@media (min-width: $min-lg) {
 		height: auto;
-		padding: 7px 0 70px 5px;
+		padding: 8px 0 27px 0;
+
+		&:not(:last-child):not(:nth-child(4n)) {
+			border-right: 1px solid #ffffff;
+		}
 	}
 
 	&::before {
@@ -32,7 +50,7 @@
 		height: 79px;
 		margin-bottom: 8px;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: left center;
 	}
 
 	&--clinically::before {
