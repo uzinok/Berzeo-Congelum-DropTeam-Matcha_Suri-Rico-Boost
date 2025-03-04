@@ -1,5 +1,11 @@
 .top-products {
 	overflow: hidden;
+
+	& > div.top-products__container {
+		@media (min-width: $min-lg) {
+			padding-bottom: 94px;
+		}
+	}
 }
 
 .top-products__swiper {

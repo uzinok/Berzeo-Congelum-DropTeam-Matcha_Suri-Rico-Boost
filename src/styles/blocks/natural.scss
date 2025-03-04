@@ -1,11 +1,5 @@
 .natural {
 	overflow: hidden;
-
-	& .page__title {
-		&::after {
-			background-color: transparent;
-		}
-	}
 }
 
 .natural__list {

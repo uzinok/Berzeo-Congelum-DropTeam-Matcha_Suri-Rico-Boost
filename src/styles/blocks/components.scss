@@ -8,6 +8,16 @@
 			}
 		}
 	}
+
+	& .page__subtitle {
+		& span {
+			color: #84ab31;
+
+			@media (min-width: $min-lg) {
+				display: block;
+			}
+		}
+	}
 }
 
 .components__swiper {

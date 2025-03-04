@@ -33,6 +33,10 @@ if (document.querySelector('.hero__swiper')) {
 			prevEl: '.hero__navigation-next',
 		},
 
+		// autoplay: {
+		// 	delay: 3000,
+		// },
+
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
