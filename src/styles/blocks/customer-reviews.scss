@@ -63,6 +63,7 @@
 	padding: 0;
 	list-style-type: none;
 	background-color: #ffffff;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 
 	@media (min-width: 600px) {
 		padding-top: 20px;
@@ -72,7 +73,6 @@
 .customer-reviews__item {
 	position: relative;
 	padding: 26px 7px 33px;
-	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 
 	@media (min-width: 600px) {
 		padding: 30px;

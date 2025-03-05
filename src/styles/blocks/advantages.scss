@@ -5,6 +5,10 @@
 div.advantages__container {
 	position: relative;
 
+	& p:last-child {
+		margin-top: 1em;
+	}
+
 	@media (min-width: 600px) {
 		display: grid;
 		grid-template-areas:

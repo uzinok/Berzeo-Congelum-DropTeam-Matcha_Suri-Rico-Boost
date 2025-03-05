@@ -170,6 +170,8 @@ if (document.querySelector('.top-products__swiper')) {
 }
 
 if (document.querySelector('.products-hero__gallery')) {
+	const path = document.querySelector('.products-hero__gallery').dataset.path;
+
 	const productsHeroGallery = new Swiper('.products-hero__gallery', {
 		speed: 400,
 		spaceBetween: 10,
@@ -179,7 +181,7 @@ if (document.querySelector('.products-hero__gallery')) {
 			type: 'bullets',
 			clickable: true,
 			renderBullet: function (index, className) {
-				return '<span class="' + className + '" aria-label="Go to stide ' + (index + 1) + '"><img src="./img/rico_boost/products-hero-pr-' + (index + 1) + '.jpg" alt="#" aria-hidden="true"></span>';
+				return '<span class="' + className + '" aria-label="Go to stide ' + (index + 1) + '"><img src="' + path + '/products-hero-pr-' + (index + 1) + '.jpg" alt="#" aria-hidden="true"></span>';
 			},
 		},
 	});
