@@ -13,11 +13,35 @@
 	transition: background-color var(--transition-duration) var(--transition-function);
 	appearance: none;
 
-	&:hover {
-		background-color: #353535;
+	&:not(:disabled) {
+		&:hover {
+			background-color: #353535;
+		}
+
+		&:active {
+			background-color: #535353;
+		}
 	}
 
-	&:active {
-		background-color: #535353;
+	&:disabled {
+		background-color: #909090;
+	}
+
+	&--green {
+		background-color: #84ab31;
+
+		&:not(:disabled) {
+			&:hover {
+				background-color: #66793d;
+			}
+
+			&:active {
+				background-color: #59653e;
+			}
+		}
+
+		&:disabled {
+			background-color: #4a4e42;
+		}
 	}
 }

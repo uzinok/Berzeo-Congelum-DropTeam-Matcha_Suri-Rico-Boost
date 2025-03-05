@@ -97,21 +97,13 @@ export function styles() {
 				assetsPath: '../'
 			}),
 			autoprefixer(),
-			csso()
 		]))
-		.pipe(rename({
-			suffix: '.min'
-		}))
 		.pipe(dest(paths.styles.dest))
 		.pipe(browserSync.stream());
 }
 
 export function html() {
 	return src(paths.html.src)
-		.pipe(htmlmin({
-			removeComments: false,
-			collapseWhitespace: true
-		}))
 		.pipe(dest(paths.html.dest))
 		.pipe(browserSync.stream());
 }

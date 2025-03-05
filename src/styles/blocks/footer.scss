@@ -1,6 +1,10 @@
 .footer {
 	color: #ffffff;
 	background-color: #232323;
+
+	& a {
+		color: inherit;
+	}
 }
 
 .footer__container {

@@ -1,0 +1,21 @@
+.cookie {
+	position: fixed;
+	bottom: 15px;
+	left: 15px;
+	z-index: 1;
+	width: fit-content;
+	padding: 20px;
+	color: #ffffff;
+	background-color: #232323;
+
+		margin: 0;
+
+	& a {
+		color: inherit;
+	}
+
+	& .button {
+		padding: 5px 10px;
+		border: 1px solid currentColor;
+	}
+}

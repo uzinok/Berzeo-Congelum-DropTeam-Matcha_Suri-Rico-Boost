@@ -300,3 +300,33 @@ window.addEventListener('load', () => {
 		let details = new Details(elem, 300);
 	});
 });
+
+// cookie
+const isCookie = null;
+const getCookie = (name) => {
+	let cookieArr = document.cookie.split("; ")
+  for (let i = 0; i < cookieArr.length; i++) {
+		let cookiePair = cookieArr[i].split("=")
+    if (name == cookiePair[0]) {
+			return cookiePair
+    }
+	}
+	return null;
+}
+
+const cookieMessage = document.querySelector('.cookie');
+const cookieMessageClose = document.querySelector('.cookie-close');
+const cookieMessageOk = document.querySelector('.cookie-ok');
+
+cookieMessageOk.addEventListener('click', () => {
+	document.cookie = "isCookie=true; path=/";
+	cookieMessage.classList.add('hidde');
+});
+
+cookieMessageClose.addEventListener('click', () => {
+	cookieMessage.classList.add('hidde');
+});
+
+if (getCookie('isCookie') === null) {
+	cookieMessage.classList.remove('hidde');
+}
